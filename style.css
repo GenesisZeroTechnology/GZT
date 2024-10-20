@@ -9,53 +9,23 @@ body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, lavender, white);
     color: #333;
-    height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-header {
-    padding: 20px;
-    background-color: transparent;
-}
-
-nav {
-    display: flex;
+    height: 100vh;
     justify-content: space-between;
-    align-items: center;
 }
 
-nav .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #4A4A8E;
-}
-
-nav .menu {
-    list-style: none;
+main {
+    flex: 1;
     display: flex;
-}
-
-nav .menu li {
-    margin-left: 20px;
-}
-
-nav .menu li a {
-    text-decoration: none;
-    color: #6A6AAB;
-    font-weight: bold;
+    justify-content: center;
+    align-items: center;
 }
 
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px;
-    flex: 1;
-}
-
-.content {
-    max-width: 500px;
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
 }
 
 .content h1 {
@@ -70,47 +40,22 @@ nav .menu li a {
     color: #555;
 }
 
-.buttons {
+#email-form {
     display: flex;
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
 }
 
-.btn {
-    padding: 10px 20px;
-    background-color: #4A4A8E;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-.btn.secondary {
-    background-color: #6A6AAB;
-}
-
-.rocket-image img {
-    width: 350px;
-}
-
-/* Mailchimp Signup Form */
-.signup {
-    text-align: center;
-    padding: 30px;
-}
-
-.signup form {
-    display: inline-block;
-}
-
-.signup input[type="email"] {
+#email-form input[type="email"] {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    flex: 1;
 }
 
-.signup button {
+#email-form .btn {
     padding: 10px 20px;
     background-color: #4A4A8E;
     color: white;
@@ -119,18 +64,48 @@ nav .menu li a {
     cursor: pointer;
 }
 
+/* Footer Buttons */
+footer {
+    background-color: #f7f7f7;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-btn {
+    padding: 10px 20px;
+    background-color: #4A4A8E;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.footer-btn:hover {
+    background-color: #6A6AAB;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero {
+    .content h1 {
+        font-size: 2.5rem;
+    }
+
+    #email-form {
         flex-direction: column;
-        text-align: center;
     }
 
-    .rocket-image img {
-        width: 250px;
+    #email-form input[type="email"] {
+        margin-right: 0;
+        margin-bottom: 10px;
     }
 
-    .buttons {
-        justify-content: center;
+    .footer-buttons {
+        flex-direction: column;
     }
 }
