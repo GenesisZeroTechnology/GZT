@@ -1,5 +1,136 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: purple;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, lavender, white);
+    color: #333;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 20px;
+    background-color: transparent;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4A4A8E;
+}
+
+nav .menu {
+    list-style: none;
+    display: flex;
+}
+
+nav .menu li {
+    margin-left: 20px;
+}
+
+nav .menu li a {
+    text-decoration: none;
+    color: #6A6AAB;
+    font-weight: bold;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    flex: 1;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.content h1 {
+    font-size: 3rem;
+    color: #4A4A8E;
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #4A4A8E;
     color: white;
-    font-family: Arial, sans-serif;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.btn.secondary {
+    background-color: #6A6AAB;
+}
+
+.rocket-image img {
+    width: 350px;
+}
+
+/* Mailchimp Signup Form */
+.signup {
+    text-align: center;
+    padding: 30px;
+}
+
+.signup form {
+    display: inline-block;
+}
+
+.signup input[type="email"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.signup button {
+    padding: 10px 20px;
+    background-color: #4A4A8E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rocket-image img {
+        width: 250px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
 }
