@@ -7,12 +7,24 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, lavender, white);
+    background: linear-gradient(135deg, #E6E6FA, white); /* Lighter lavender */
     color: #333;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     justify-content: space-between;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4A4A8E;
 }
 
 main {
@@ -20,6 +32,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .hero {
@@ -44,24 +57,29 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
 }
 
-#email-form input[type="email"] {
+#email-form input[type="email"],
+#email-form .btn {
     padding: 10px;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 250px; /* Set equal width for email and button */
     margin-right: 10px;
-    flex: 1;
 }
 
 #email-form .btn {
-    padding: 10px 20px;
     background-color: #4A4A8E;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    width: 250px;
+}
+
+#email-form input[type="email"] {
+    margin-right: 10px;
 }
 
 /* Footer Buttons */
@@ -69,6 +87,9 @@ footer {
     background-color: #f7f7f7;
     padding: 10px;
     text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
 }
 
 .footer-buttons {
